@@ -3,7 +3,9 @@ from selenium.webdriver.common.keys import Keys
 import time
 from script.ignore.confidential import uname, pw
 
-driver = webdriver.Chrome()
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get('https://twitter.com/')
 keyword= "gojek"
 
